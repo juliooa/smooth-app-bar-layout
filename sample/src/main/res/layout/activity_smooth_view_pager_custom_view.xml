@@ -38,9 +38,6 @@
           style="@style/AppStyle.MdToolbar"
           android:visibility="gone"/>
 
-
-
-
       <LinearLayout
           android:layout_width="match_parent"
           android:layout_height="200dp"

@@ -26,6 +26,7 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 import me.henrytao.smoothappbarlayoutdemo.R;
 import me.henrytao.smoothappbarlayoutdemo.apdater.ViewPagerAdapter;
+import me.henrytao.smoothappbarlayoutdemo.fragment.PagerWithCustomHeaderFragment;
 import me.henrytao.smoothappbarlayoutdemo.fragment.PagerWithHeaderAsyncFragment;
 import me.henrytao.smoothappbarlayoutdemo.fragment.PagerWithHeaderFragment;
 
@@ -58,13 +59,13 @@ public class SmoothViewPagerCustomViewActivity extends BaseActivity {
 
     mViewPagerAdapter = new ViewPagerAdapter(getSupportFragmentManager());
     mViewPagerAdapter.onRestoreInstanceState(savedInstanceState);
-    mViewPagerAdapter.addFragment("Cat", PagerWithHeaderFragment.newInstance(false, false));
-    mViewPagerAdapter.addFragment("Dog", PagerWithHeaderFragment.newInstance(true, false));
-    mViewPagerAdapter.addFragment("Mouse", PagerWithHeaderFragment.newInstance(true, true));
-    mViewPagerAdapter.addFragment("Bird", PagerWithHeaderFragment.newInstance(false, true));
-    mViewPagerAdapter.addFragment("Chicken", PagerWithHeaderFragment.newInstance(false, false));
-    mViewPagerAdapter.addFragment("Tiger", PagerWithHeaderAsyncFragment.newInstance(false));
-    mViewPagerAdapter.addFragment("Elephant", PagerWithHeaderAsyncFragment.newInstance(true));
+    mViewPagerAdapter.addFragment("Cat", PagerWithCustomHeaderFragment.newInstance(false, false));
+    mViewPagerAdapter.addFragment("Dog", PagerWithCustomHeaderFragment.newInstance(true, false));
+    mViewPagerAdapter.addFragment("Mouse", PagerWithCustomHeaderFragment.newInstance(true, true));
+    mViewPagerAdapter.addFragment("Bird", PagerWithCustomHeaderFragment.newInstance(false, true));
+    mViewPagerAdapter.addFragment("Chicken", PagerWithCustomHeaderFragment.newInstance(false, false));
+    mViewPagerAdapter.addFragment("Tiger", PagerWithCustomHeaderFragment.newInstance(false, false));
+    mViewPagerAdapter.addFragment("Elephant", PagerWithCustomHeaderFragment.newInstance(false, false));
 
     vViewPager.setAdapter(mViewPagerAdapter);
     //vViewPager.setOffscreenPageLimit(vViewPager.getAdapter().getCount());
