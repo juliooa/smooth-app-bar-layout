@@ -91,5 +91,8 @@
     <activity
       android:label="@string/title_activity_smooth_view_pager_quick_return"
       android:name=".activity.SmoothViewPagerQuickReturnActivity" />
+    <activity
+        android:label="@string/title_activity_smooth_view_pager_custom_view"
+        android:name=".activity.SmoothViewPagerCustomViewActivity" />
   </application>
 </manifest>
